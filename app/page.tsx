@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <h1>Airbnb clone app</h1>
+    <h1 className="text-3xl font-bold underline">Airbnb clone app</h1>
   )
 }
