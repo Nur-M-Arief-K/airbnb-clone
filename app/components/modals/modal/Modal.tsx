@@ -1,12 +1,13 @@
 "use client";
 
+/* hooks */
 import React, { useState, useEffect, useCallback } from "react";
 
 /* react component */
 import { IoMdClose } from "react-icons/io";
 
 /* components */
-import Button from "../button/Button";
+import Button from "../../button/Button";
 
 /* styles */
 import styles from "./styles";
@@ -73,7 +74,7 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <>
       <div className={styles.backdrop}>
-        <div className={styles.wrapper}>
+        <div className={styles.placeholder}>
           <div className={styles.modal(showModal)}>
             <div className={styles.modalContent}>
               <div className={styles.header}>
@@ -99,6 +100,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>

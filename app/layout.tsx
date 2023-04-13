@@ -1,10 +1,11 @@
 /* components */
 import Navbar from "./components/navbar/Navbar";
-import Modal from "./components/modal/Modal";
 
 /* styling */
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import RegisterModal from "./components/modals/registermodal/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 export const metadata = {
   title: "Airbnb clone",
@@ -24,7 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Modal isOpen actionLabel="Submit" title="login" />
+        <ToasterProvider />
+        <RegisterModal />
         <Navbar />
         {children}
       </body>

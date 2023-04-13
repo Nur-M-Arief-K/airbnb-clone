@@ -1,6 +1,6 @@
 const styles = {
     backdrop: "flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-neutral-500/70",
-    wrapper: "relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto",
+    placeholder: "relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto",
     modal: (showModal: boolean) => {
         const staticStyle = "h-full translate duration-300";
         let dynamicStyle: string;

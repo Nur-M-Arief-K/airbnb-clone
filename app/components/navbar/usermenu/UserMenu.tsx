@@ -2,6 +2,7 @@
 
 /* hooks */
 import React, { useCallback, useState } from "react";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 
 /* react components */
 import { AiOutlineMenu } from "react-icons/ai";
@@ -15,6 +16,8 @@ import styles from "./styles";
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { onOpen, onClose } = useRegisterModal();
 
   const toggleOpen = useCallback(() => {
     setIsOpen(!isOpen);
@@ -38,7 +41,7 @@ const UserMenu = () => {
           <div className={styles.profileMenu}>
             <>
               <MenuItem onClick={() => {}} label="Login"/>
-              <MenuItem onClick={() => {}} label="Sign up"/>
+              <MenuItem onClick={onOpen} label="Sign up"/>
             </>
           </div>
         </div>
